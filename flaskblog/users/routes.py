@@ -46,7 +46,6 @@ def logout():
     return redirect(url_for('main.home'))
 
 
-
 @users.route("/account", methods=['GET','POST'])
 def account():
     form = UpdateAccountForm()

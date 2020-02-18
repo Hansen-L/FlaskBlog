@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- Gallery Template -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/templatemo_misc.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/templatemo_style.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Blog</title>
+    {% endif %}
+
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">Blogger</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('main.home') }}">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('gallery.image_gallery') }}">Image Gallery</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+                {% if current_user.is_authenticated %}
+                    <a class="nav-item nav-link navbar-expand-lg" href="{{ url_for('posts.new_post') }}">New Post</a>
+                    <a class="nav-item nav-link" href="{{ url_for('gallery.upload') }}">Upload Image</a>
+                    <a class="nav-item nav-link" href="{{ url_for('gallery.user_gallery', ) }}">My Images</a>
+                    <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
+                    <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
+                {% else %}
+                    <a class="nav-item nav-link" href="{{ url_for('users.login') }}">Login</a>
+                    <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-9">
+            {% with messages = get_flashed_messages(with_categories=true) %} <!-- fetch all flashed messages, if they exist, loop through them and print-->
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                        {{message}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="col-md-12">
+                <h1>My Pictures</h1>
+                <form method="POST">
+                    <div class="form-group">
+                        {{ form.search(class="form-control", placeholder="Enter Search Terms")}}
+                    </div>
+                </form>
+            </div>
+            <form method="POST">
+                <div class="content portfolio" id="menu-3">
+                  <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('gallery.delete_all') }}">Delete All</a>
+                                    {{ deletesubmit.submit(class="btn btn-secondary btn-sm mt-1 mb-1") }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="row templatemo_portfolio">
+                            {% for image in images %}
+                                <div class="col-md-4 col-sm-12">
+                                    <div style="margin-top:10px; margin-left:3px">
+                                        {{ image.description }}
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="{{'../static/gallery_images/' + image.image_file }}" alt="gallery 1">
+                                        <div class="overlay">
+                                            <a href="{{'../static/gallery_images/' + image.image_file }}" data-rel="lightbox" class="fa fa-arrows-alt"></a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        {{ image.google_labels }}
+                                    </div>
+                                    <input type="checkbox" id="id_{{image.id}}" name="images" value="{{image.id}}">
+                                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('gallery.delete', file_id=image.id) }}">Delete</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                  </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Gallery Template Scripts-->
+	<script src="../static/js/jquery-1.10.2.min.js"></script>
+	<script src="../static/js/jquery.singlePageNav.js"></script>
+	<script src="../static/js/jquery.flexslider.js"></script>
+
+	<script src="../static/js/custom.js"></script>
+	<script src="../static/js/jquery.lightbox.js"></script>
+	<script src="../static/js/templatemo_custom.js"></script>
+    <script src="../static/js/jquery-git2.js"></script>
+</body>
+</html>

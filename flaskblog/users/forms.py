@@ -12,7 +12,6 @@ class RegistrationForm(FlaskForm):#this registration inherits from flaskform
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-
     submit = SubmitField('Sign Up Now!')
 
     def validate_username(self, username):
@@ -37,7 +36,7 @@ class UpdateAccountForm(FlaskForm):#this registration inherits from flaskform
     username = StringField('Username',
                            validators=[DataRequired(), Length(min=2, max=20)])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png'])])
+    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
     submit = SubmitField('Update')
 
     def validate_username(self, username):

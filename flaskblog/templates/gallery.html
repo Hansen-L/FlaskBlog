@@ -24,20 +24,21 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="/">Flask Blog</a>
+          <a class="navbar-brand mr-4" href="/">Blogger</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{{ url_for('main.home') }}">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('gallery.image_gallery') }}">Image Gallery</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
                 {% if current_user.is_authenticated %}
                     <a class="nav-item nav-link navbar-expand-lg" href="{{ url_for('posts.new_post') }}">New Post</a>
                     <a class="nav-item nav-link" href="{{ url_for('gallery.upload') }}">Upload Image</a>
-                    <a class="nav-item nav-link" href="{{ url_for('gallery.image_gallery') }}">Image Gallery</a>
+                    <a class="nav-item nav-link" href="{{ url_for('gallery.user_gallery', ) }}">My Images</a>
                     <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
                     <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
                 {% else %}
@@ -64,41 +65,52 @@
                 {% endif %}
             {% endwith %}
 
-            <form method="POST">
                 <div class="content portfolio" id="menu-3">
                   <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <h1>Picture Gallery</h1>
-                                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('gallery.delete_all') }}">Delete All</a>
-                                <input class="btn btn-secondary btn-sm mt-1 mb-1" type="submit" value="Delete Selection">
-                                <div class="form-group">
-                                    {{ form.search(class="form-control") }}
-                                </div>
+                                <form method="POST">
+                                    <div class="form-group">
+                                        {{ form.search(class="form-control", placeholder="Enter Search Terms")}}
+                                    </div>
+                                </form>
                             </div>
-
                         </div>
                         <div class="clear"></div>
-                        <div class="row templatemo_portfolio">
-                            {% for image in images %}
-                                <div class="col-md-4 col-sm-12">
-                                    <div style="margin-top:10px; margin-left:3px">
-                                        {{ image.description }}
-                                    </div>
-                                    <div class="gallery-item">
-                                        <img src="{{'static/gallery_images/' + image.image_file }}" alt="gallery 1">
-                                        <div class="overlay">
-                                            <a href="{{'static/gallery_images/' + image.image_file }}" data-rel="lightbox" class="fa fa-arrows-alt"></a>
+                            <form method="POST">
+                                <div class="form-group">
+                                    {{ share_form.recipient_email.label(class="form-control-label")}}
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {{ share_form.recipient_email(class="form-control col-md-5", placeholder="Enter Recipient Email")}}
+                                            {{ share_form.submit(class="btn btn-outline-info col-md-5")}}
                                         </div>
                                     </div>
-                                    <input type="checkbox" id="id_{{image.id}}" name="images" value="{{image.id}}">
-                                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('gallery.delete', file_id=image.id) }}">Delete</a>
                                 </div>
-                            {% endfor %}
-                        </div>
+                                <div class="row templatemo_portfolio">
+                                    {% for image in images %}
+                                        <div class="col-md-4 col-sm-12">
+                                            <div style="margin-top:10px; margin-left:3px">
+                                                {{ image.description }}
+                                            </div>
+                                            <div class="gallery-item">
+                                                <img src="{{'static/gallery_images/' + image.image_file }}" alt="gallery 1">
+                                                <div class="overlay">
+                                                    <a href="{{'static/gallery_images/' + image.image_file }}" data-rel="lightbox" class="fa fa-arrows-alt"></a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                {{ image.google_labels }}
+                                            </div>
+                                            <input type="checkbox" id="id_{{image.id}}" name="images" value="{{image.id}}">
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </form>
+                    </div>
                   </div>
                 </div>
-            </form>
         </div>
       </div>
     </main>

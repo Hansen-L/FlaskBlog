@@ -1,0 +1,10 @@
+/.idea
+.idea
+.idea/
+/flaskblog/static/gallery_images
+/flaskblog/__pycache__
+*/__pycache__/
+roadmap.docx
+/flaskblog/gallery/key.json
+flaskblog/test.db
+

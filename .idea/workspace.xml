@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="891d41d4-9f85-4e2f-a559-8c1d90ba2fd5" name="Default Changelist" comment="" />
+    <list default="true" id="891d41d4-9f85-4e2f-a559-8c1d90ba2fd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flaskblog/gallery/google_vision.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskblog/templates/user_gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FlaskBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskBlog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/gallery/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/gallery/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/gallery/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/gallery/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/gallery/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/gallery/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/site.db" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/site.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/templates/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/templates/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/users/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskblog/users/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskblog/users/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="339" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -26,18 +50,32 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VOymywhR5APuWfYBRBpvmTiER3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Anaconda3/envs/flaskapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hansen\Desktop\Projects\FlaskTutorial\flaskblog\users" />
+      <recent name="C:\Users\Hansen\Desktop\Projects\FlaskTutorial\flaskblog\posts" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -52,20 +90,20 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run">
-    <configuration name="flaskblog" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FlaskTutorial" />
+    <configuration name="google_vision" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FlaskBlog" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskblog/gallery" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Hansen\Desktop\Projects\FlaskTutorial\run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flaskblog/gallery/google_vision.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +113,7 @@
       <method v="2" />
     </configuration>
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FlaskTutorial" />
+      <module name="FlaskBlog" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -96,10 +134,65 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FlaskBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskblog/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flaskblog/tests/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in tests.py (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="FlaskBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskblog/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/flaskblog/tests/tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="FlaskBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.flaskblog" />
+        <item itemvalue="Python tests.Unittests in tests.py (1)" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.google_vision" />
+        <item itemvalue="Python tests.Unittests in tests.py" />
       </list>
     </recent_temporary>
   </component>
@@ -115,15 +208,63 @@
       <updated>1577138599508</updated>
       <workItem from="1577138602784" duration="31000" />
       <workItem from="1577139029072" duration="406000" />
-      <workItem from="1577141048886" duration="28257000" />
+      <workItem from="1577141048886" duration="51633000" />
+      <workItem from="1581119417935" duration="9616000" />
+      <workItem from="1581217605017" duration="412000" />
+      <workItem from="1581227446723" duration="513000" />
+      <workItem from="1581264978226" duration="5540000" />
+      <workItem from="1581393178410" duration="5313000" />
+      <workItem from="1581450327650" duration="1261000" />
+      <workItem from="1581463685760" duration="85000" />
+      <workItem from="1581463898679" duration="5266000" />
+      <workItem from="1581474044408" duration="4895000" />
+      <workItem from="1581803196845" duration="941000" />
+      <workItem from="1581881262920" duration="10167000" />
+      <workItem from="1581915588171" duration="5240000" />
+      <workItem from="1581960132791" duration="9027000" />
+      <workItem from="1581982009676" duration="5476000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flaskblog/gallery/utils.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flaskblog/tests/tests.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FlaskBlog$google_vision.coverage" NAME="google_vision Coverage Results" MODIFIED="1581976435882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskblog/gallery" />
+    <SUITE FILE_PATH="coverage/FlaskBlog$Unittests_in_tests_py.coverage" NAME="Unittests in tests.py Coverage Results" MODIFIED="1581960561748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskBlog$run.coverage" NAME="run Coverage Results" MODIFIED="1581995219756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskBlog$Unittests_in_tests_py__1_.coverage" NAME="Unittests in tests.py (1) Coverage Results" MODIFIED="1581982243825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskblog/tests" />
     <SUITE FILE_PATH="coverage/FlaskTutorial$flaskblog.coverage" NAME="flaskblog Coverage Results" MODIFIED="1577245573315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlaskTutorial$run.coverage" NAME="run Coverage Results" MODIFIED="1577331247901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskBlog$tests.coverage" NAME="tests Coverage Results" MODIFIED="1581982197363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flaskblog/tests" />
+    <SUITE FILE_PATH="coverage/FlaskTutorial$run.coverage" NAME="run Coverage Results" MODIFIED="1581463095114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

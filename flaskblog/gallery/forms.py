@@ -10,4 +10,11 @@ class UploadPictureForm(FlaskForm):#this registration inherits from flaskform
 
 
 class SearchForm(FlaskForm):
-    search = StringField('Search the gallery!')
+    search = StringField('Search the gallery!', validators=None)
+
+class DeleteSubmit(FlaskForm):
+    submit = SubmitField('Delete Selection')
+
+class ShareForm(FlaskForm):
+    recipient_email = StringField('Recipient Email', validators=[DataRequired(), Email()])
+    submit = SubmitField('Share Selected Pictures')
